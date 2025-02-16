@@ -1,0 +1,108 @@
+# python iterators and generators 
+#task1
+#Create a generator that generates the squares of numbers up to some number N.
+"""""
+def generator(n):
+    for i in  range (n+1):
+        yield i**2
+n=10
+gen=generator(n)
+for square in gen:
+    print(square)
+    """
+"""
+output:
+1
+4
+9
+16
+25
+36
+49
+64
+81
+100
+"""
+#task 2
+#Write a program using generator to print the even numbers between 0 and n in comma separated form where n is input from console.
+"""""
+def evennum_generator(s):
+    for i in range (s+1):
+        if i%2==0:
+            yield i
+s=int(input("enter number:"))
+gen1=evennum_generator(s)
+evennums=[str(num) for num in gen1]
+print (" ".join(evennums))
+
+    """
+"""""
+putput: i entered 14 ;)
+0 2 4 6 8 10 12 14
+"""
+"""""
+#task 3
+ #Define a function with a generator which can iterate the numbers, which are divisible by 3 and 4, between a given range 0 and `n`.
+def gen2(m):
+    for i in range (m+1):
+        if i%3==0 and i%4==0:
+            yield i
+m=100
+divisible = gen2(m)
+for div in divisible:
+    print(div)
+    """
+"""""
+output:
+0
+12
+24
+36
+48
+60
+72
+84
+96
+"""
+#task 4
+#Implement a generator called `squares` to yield the square of all numbers from (a) to (b). Test it with a "for" loop and print each of the yielded values.
+"""""
+def square(a,b):
+    for i in range (a,b+1):
+        yield i**2
+
+a=int(input("enter first number:"))
+b=int(input("enter second number:"))
+squares=square(a,b)
+for squares1 in squares:
+    print(squares1)
+    """
+"""""
+output: i entered 2 and 8
+4
+9
+16
+25
+36
+49
+64
+"""
+# task 5
+# Implement a generator that returns all numbers from (n) down to 0
+def implement(k):
+    for i in range (k, -1 , -1):
+        yield i
+
+k=int(input("enter number:"))
+gen=implement(k)
+for result in gen:
+    print(result)
+    """""
+output: i entered 5
+5
+4
+3
+2
+1
+0
+"""
