@@ -1,0 +1,22 @@
+{
+    "interfaceStatus": [
+        {
+            "dn": "topology/pod-1/node-201/sys/phys-[eth1/33]",
+            "description": "inherit",
+            "speed": "9150",
+            "mtu": "9150"
+        },
+        {
+            "dn": "topology/pod-1/node-201/sys/phys-[eth1/34]",
+            "description": "inherit",
+            "speed": "9150",
+            "mtu": "9150"
+        },
+        {
+            "dn": "topology/pod-1/node-201/sys/phys-[eth1/35]",
+            "description": "inherit",
+            "speed": "9150",
+            "mtu": "9150"
+        }
+    ]
+}
