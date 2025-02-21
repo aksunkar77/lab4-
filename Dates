@@ -1,0 +1,54 @@
+#in this file i will write tasks  with date
+# Write a Python program to subtract five days from current date 
+#task1
+from datetime import datetime, timedelta
+current_date = datetime.now()
+new_date = current_date - timedelta(days=5)
+print("Current date:", current_date)
+print("New date after subtracting 5 days:", new_date)
+"""""
+output:
+Current date: 2025-02-21 08:47:59.972032
+New date after subtracting 5 days: 2025-02-16 08:47:59.972032
+"""
+
+#task2
+#Write a Python program to print yesterday, today, tomorrow.
+from datetime import datetime, timedelta
+today = datetime.now()
+yesterday = today - timedelta(days=1)
+tomorrow = today + timedelta(days=1)
+print("Yesterday:", yesterday)
+print("Today:", today)
+print("Tomorrow:", tomorrow)
+"""""
+output:
+Yesterday: 2025-02-20 08:50:28.525258
+Today: 2025-02-21 08:50:28.525258
+Tomorrow: 2025-02-22 08:50:28.525258
+"""
+
+#task3
+#Write a Python program to drop microseconds from datetime
+from datetime import datetime
+now = datetime.now()
+now2 = now.replace(microsecond=0)
+print("Original datetime:", now)
+print("Datetime without microseconds:", now2)
+"""""
+Original datetime: 2025-02-21 08:52:57.241804
+Datetime without microseconds: 2025-02-21 08:52:57
+"""
+
+#task4
+#Write a Python program to calculate two date difference in seconds
+from datetime import datetime
+date1 = datetime(2025, 2, 21, 10, 30)
+date2 = datetime(2025, 2, 22, 12, 45)
+difference = date2 - date1
+difference2 = difference.total_seconds()
+print("Difference in seconds:", difference2)
+"""""
+output:
+Difference in seconds: 94500.0
+"""
