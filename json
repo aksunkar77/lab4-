@@ -1,0 +1,23 @@
+import json
+with open('sample-data.json', 'r') as file:
+    data = json.load(file)
+print("interface")
+print("="*80)
+print(f"{'DN':<50} {'Description':<20} {'Speed':<10} {'MTU':<5}")
+print("-"*80)
+for item in data["interfaceStatus"]:
+    dn = item["dn"]
+    description = item["description"]
+    speed = item["speed"]
+    mtu = item["mtu"]
+    print(f"{dn:<50} {description:<20} {speed:<10} {mtu:<5}")
+
+"""
+   Interface Status
+================================================================================
+DN                                                 Description           Speed    MTU  
+-------------------------------------------------- --------------------  ------  ------
+topology/pod-1/node-201/sys/phys-[eth1/33]                              inherit   9150 
+topology/pod-1/node-201/sys/phys-[eth1/34]                              inherit   9150 
+topology/pod-1/node-201/sys/phys-[eth1/35]                              inherit   9150 
+"""
